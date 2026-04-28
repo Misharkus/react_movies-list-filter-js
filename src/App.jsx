@@ -4,8 +4,6 @@ import { MoviesList } from './components/MoviesList';
 import moviesFromServer from './api/movies.json';
 
 function getPreparedMovies(movies, { query }) {
-  const preparedMovies = [...movies];
-
   if (query) {
     return movies.filter(movie => {
       return (
@@ -15,7 +13,7 @@ function getPreparedMovies(movies, { query }) {
     });
   }
 
-  return preparedMovies;
+  return movies;
 }
 
 export const App = () => {
